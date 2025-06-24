@@ -27,7 +27,7 @@ function Register() {
     try {
       const decoded = jwtDecode(credentialResponse.credential);
 
-      const res = await axios.post("http://localhost:5000/api/users/google-login", {
+      const res = await axios.post("https://mutual-fund-tracker-00mp.onrender.com/api/users/google-login", {
         email: decoded.email,
         name: decoded.name,
         googleId: decoded.sub,

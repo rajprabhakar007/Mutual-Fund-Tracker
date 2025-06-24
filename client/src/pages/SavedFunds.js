@@ -8,13 +8,15 @@ import '../index.css';
 
 function SavedFunds() {
   const [funds, setFunds] = useState([]);
+  const [loading, setLoading] = useState(true); // 🔹 loading state
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     const fetchFunds = async () => {
       try {
         const res = await getSavedFunds();
         setFunds(res.data);
+        setLoading(false);
       } catch {
         alert("Error fetching saved funds. Please log in first.");
         navigate("/login");
@@ -37,7 +39,18 @@ function SavedFunds() {
   return (
     <div className="container mt-5">
       <h3>Your Saved Funds</h3>
-      {funds.length === 0 ? (
+
+      {loading ? (
+        <div className="d-flex justify-content-center mt-4">
+          <div
+            className="spinner-border text-primary"
+            role="status"
+            style={{ width: "3rem", height: "3rem" }}
+          >
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      ) : funds.length === 0 ? (
         <p>No saved funds.</p>
       ) : (
         <ul className="list-group">

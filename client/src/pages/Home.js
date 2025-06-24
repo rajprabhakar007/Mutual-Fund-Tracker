@@ -7,7 +7,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/funds/list")
+    fetch("https://mutual-fund-tracker-00mp.onrender.com/api/funds/list")
       .then(res => res.json())
       .then(data => {
         setFunds(data);

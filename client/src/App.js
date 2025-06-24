@@ -12,10 +12,10 @@ function App() {
   return (
     <Router>
       <div className="d-flex flex-column min-vh-100">
-        {/* Navbar stays at the top */}
+        
         <Navbar />
 
-        {/* Main content with flex-grow to push footer down */}
+        
         <div className="container flex-grow-1 mt-4">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -28,7 +28,7 @@ function App() {
           </Routes>
         </div>
 
-        {/* Footer sticks to the bottom if content is short */}
+        
         <Footer />
       </div>
     </Router>
