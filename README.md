@@ -6,8 +6,8 @@ A full-stack web application that allows users to **search**, **analyze**, **sav
 
 ## 🌐 Live Demo
 
-Frontend: [https://mutual-fund-tracker-3.onrender.com](#)  
-Backend: [https://mutual-fund-tracker-00mp.onrender.com](#)
+Frontend: [https://mutual-fund-tracker-3.onrender.com](https://mutual-fund-tracker-3.onrender.com)  
+Backend: [https://mutual-fund-tracker-00mp.onrender.com](https://mutual-fund-tracker-00mp.onrender.com)
 
 ---
 
